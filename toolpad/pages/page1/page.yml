@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: page
+spec:
+  id: 4AnXR8F
+  title: Default page
+  content:
+    - component: PageRow
+      name: pageRow1
+      children:
+        - component: Tabs
+          name: tabs
+    - component: PageRow
+      name: pageRow
+      children:
+        - component: Container
+          name: container
+          children:
+            - component: PageRow
+              name: pageRow2
+              children:
+                - component: Form
+                  name: form
+                  children:
+                    - component: PageRow
+                      name: pageRow3
+                      children:
+                        - component: PageColumn
+                          name: pageColumn
+                          layout:
+                            columnSize: 1
+                          children:
+                            - component: TextField
+                              name: textField
+                              props:
+                                label: A1
+                                fullWidth: true
+                                isRequired: true
+                            - component: Select
+                              name: select
+                              props:
+                                fullWidth: true
+                                size: small
+                                variant: outlined
+                                disabled: false
+                                isRequired: true
+                                label: A2
+                                name: A2
+                            - component: Text
+                              name: text
+                              props:
+                                loading: true
+                                variant: h3
+                            - component: FilePicker
+                              name: filePicker
+                            - component: DatePicker
+                              name: datePicker
+                            - component: Autocomplete
+                              name: autocomplete
+                              props:
+                                fullWidth: true
+                                size: small
+                                loading: true
+                  props:
+                    hasResetButton: true
+                    formControlsFullWidth: true
+  parameters:
+    - name: P1
+      value: AAA
+    - name: P2
+      value: BBB
+  display: shell
